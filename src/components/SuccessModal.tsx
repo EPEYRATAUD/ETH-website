@@ -28,8 +28,8 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose, environmen
               <div className="absolute inset-0 bg-green-400 blur-lg opacity-30 rounded-full"></div>
             </div>
             <div>
-              <h2 className="text-xl font-bold text-white mb-1">Environment Created!</h2>
-              <p className="text-gray-300 text-sm">Your Kubernetes environment request has been successfully submitted</p>
+              <h2 className="text-xl font-bold text-white mb-1">Environnement créé !</h2>
+              <p className="text-gray-300 text-sm">Votre demande d'environnement Kubernetes a été soumise avec succès</p>
             </div>
           </div>
         </div>
@@ -37,20 +37,20 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose, environmen
         {/* Content */}
         <div className="p-6 space-y-4">
           <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
-            <div className="text-sm text-gray-400 mb-1">Environment Name</div>
+            <div className="text-sm text-gray-400 mb-1">Nom de l'environnement</div>
             <div className="font-semibold text-white">{environmentName}</div>
           </div>
 
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg p-4 border border-blue-500/30">
-            <h3 className="text-sm font-semibold text-blue-400 mb-2">⏱️ Provisioning Timeline</h3>
+            <h3 className="text-sm font-semibold text-blue-400 mb-2">⏱️ Délai de provisionnement</h3>
             <p className="text-sm text-gray-300">
-              Your environment will be ready in approximately <strong>3-5 minutes</strong>. 
-              You'll receive a notification once deployment is complete.
+              Votre environnement sera prêt dans environ <strong>3-5 minutes</strong>. 
+              Vous recevrez une notification une fois le déploiement terminé.
             </p>
           </div>
 
           <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-gray-300">Next Steps</h3>
+            <h3 className="text-sm font-semibold text-gray-300">Prochaines étapes</h3>
             
             <a 
               href="#"
@@ -58,8 +58,8 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose, environmen
             >
               <Settings className="h-5 w-5 text-cyan-400" />
               <div className="flex-1">
-                <div className="text-sm font-medium text-white">Access Dashboard</div>
-                <div className="text-xs text-gray-400">Monitor and manage your environment</div>
+                <div className="text-sm font-medium text-white">Accéder au tableau de bord</div>
+                <div className="text-xs text-gray-400">Surveillez et gérez votre environnement</div>
               </div>
               <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-white" />
             </a>
@@ -70,8 +70,8 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose, environmen
             >
               <Book className="h-5 w-5 text-purple-400" />
               <div className="flex-1">
-                <div className="text-sm font-medium text-white">View Documentation</div>
-                <div className="text-xs text-gray-400">Learn how to deploy your applications</div>
+                <div className="text-sm font-medium text-white">Voir la documentation</div>
+                <div className="text-xs text-gray-400">Apprenez à déployer vos applications</div>
               </div>
               <ExternalLink className="h-4 w-4 text-gray-400 group-hover:text-white" />
             </a>
@@ -84,7 +84,7 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose, environmen
             onClick={onClose}
             className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200 transform hover:scale-105"
           >
-            Continue to Dashboard
+            Continuer vers le tableau de bord
           </button>
         </div>
       </div>

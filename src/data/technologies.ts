@@ -7,7 +7,7 @@ export const technologies: Technology[] = [
     name: 'Node.js',
     category: 'language',
     icon: '🟢',
-    description: 'JavaScript runtime for server-side development',
+    description: 'Runtime JavaScript pour le développement côté serveur',
     version: '20.x'
   },
   {
@@ -15,7 +15,7 @@ export const technologies: Technology[] = [
     name: 'Python',
     category: 'language',
     icon: '🐍',
-    description: 'High-level programming language for versatile development',
+    description: 'Langage de programmation haut niveau pour un développement polyvalent',
     version: '3.11'
   },
   {
@@ -23,7 +23,7 @@ export const technologies: Technology[] = [
     name: 'Java',
     category: 'language',
     icon: '☕',
-    description: 'Enterprise-grade platform for scalable applications',
+    description: 'Plateforme de niveau entreprise pour applications évolutives',
     version: '17 LTS'
   },
   {
@@ -31,7 +31,7 @@ export const technologies: Technology[] = [
     name: 'Go',
     category: 'language',
     icon: '🔷',
-    description: 'Fast, compiled language for modern cloud applications',
+    description: 'Langage compilé rapide pour applications cloud modernes',
     version: '1.21'
   },
   {
@@ -39,7 +39,7 @@ export const technologies: Technology[] = [
     name: 'PHP',
     category: 'language',
     icon: '🟣',
-    description: 'Popular scripting language for web development',
+    description: 'Langage de script populaire pour le développement web',
     version: '8.2'
   },
   {
@@ -47,7 +47,7 @@ export const technologies: Technology[] = [
     name: 'Ruby',
     category: 'language',
     icon: '💎',
-    description: 'Dynamic programming language focused on simplicity',
+    description: 'Langage de programmation dynamique axé sur la simplicité',
     version: '3.2'
   },
 
@@ -57,21 +57,21 @@ export const technologies: Technology[] = [
     name: 'Nginx',
     category: 'loadBalancer',
     icon: '🔀',
-    description: 'High-performance HTTP load balancer and reverse proxy'
+    description: 'Répartiteur de charge HTTP haute performance et proxy inverse'
   },
   {
     id: 'haproxy',
     name: 'HAProxy',
     category: 'loadBalancer',
     icon: '⚖️',
-    description: 'Reliable, high-performance TCP/HTTP load balancer'
+    description: 'Répartiteur de charge TCP/HTTP fiable et haute performance'
   },
   {
     id: 'traefik',
     name: 'Traefik',
     category: 'loadBalancer',
     icon: '🌐',
-    description: 'Modern HTTP reverse proxy and load balancer'
+    description: 'Proxy inverse HTTP moderne et répartiteur de charge'
   },
 
   // Web Servers
@@ -80,21 +80,21 @@ export const technologies: Technology[] = [
     name: 'Nginx',
     category: 'webServer',
     icon: '🌊',
-    description: 'High-performance web server and reverse proxy'
+    description: 'Serveur web haute performance et proxy inverse'
   },
   {
     id: 'apache',
     name: 'Apache',
     category: 'webServer',
     icon: '🪶',
-    description: 'World\'s most used web server software'
+    description: 'Logiciel de serveur web le plus utilisé au monde'
   },
   {
     id: 'caddy',
     name: 'Caddy',
     category: 'webServer',
     icon: '🔒',
-    description: 'Web server with automatic HTTPS'
+    description: 'Serveur web avec HTTPS automatique'
   },
 
   // Databases
@@ -103,28 +103,28 @@ export const technologies: Technology[] = [
     name: 'PostgreSQL',
     category: 'database',
     icon: '🐘',
-    description: 'Advanced open-source relational database'
+    description: 'Base de données relationnelle open-source avancée'
   },
   {
     id: 'mysql',
     name: 'MySQL',
     category: 'database',
     icon: '🐬',
-    description: 'Popular open-source relational database'
+    description: 'Base de données relationnelle open-source populaire'
   },
   {
     id: 'mongodb',
     name: 'MongoDB',
     category: 'database',
     icon: '🍃',
-    description: 'Document-based NoSQL database'
+    description: 'Base de données NoSQL basée sur les documents'
   },
   {
     id: 'redis',
     name: 'Redis',
     category: 'database',
     icon: '🔴',
-    description: 'In-memory data structure store'
+    description: 'Magasin de structures de données en mémoire'
   }
 ];
 

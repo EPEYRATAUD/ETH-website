@@ -6,8 +6,8 @@ const Environments: React.FC = () => {
     {
       id: '1',
       name: 'my-webapp',
-      status: 'running',
-      uptime: '2d 14h',
+      status: 'en cours',
+      uptime: '2j 14h',
       domain: 'my-webapp.eth-cloud.edu',
       stack: ['Node.js', 'MongoDB', 'Nginx'],
       resources: { cpu: 2, ram: 4, storage: 20 }
@@ -15,8 +15,8 @@ const Environments: React.FC = () => {
     {
       id: '2', 
       name: 'api-service',
-      status: 'running',
-      uptime: '1d 8h',
+      status: 'en cours',
+      uptime: '1j 8h',
       domain: 'api-service.eth-cloud.edu',
       stack: ['Python', 'PostgreSQL', 'Nginx'],
       resources: { cpu: 1, ram: 2, storage: 15 }
@@ -24,7 +24,7 @@ const Environments: React.FC = () => {
     {
       id: '3',
       name: 'test-env',
-      status: 'stopped',
+      status: 'arrêté',
       uptime: '0h',
       domain: null,
       stack: ['PHP', 'MySQL', 'Apache'],
@@ -34,9 +34,9 @@ const Environments: React.FC = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'running': return 'text-green-400 bg-green-400/20';
-      case 'stopped': return 'text-gray-400 bg-gray-400/20';
-      case 'error': return 'text-red-400 bg-red-400/20';
+      case 'en cours': return 'text-green-400 bg-green-400/20';
+      case 'arrêté': return 'text-gray-400 bg-gray-400/20';
+      case 'erreur': return 'text-red-400 bg-red-400/20';
       default: return 'text-yellow-400 bg-yellow-400/20';
     }
   };
@@ -46,8 +46,8 @@ const Environments: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl font-bold text-white mb-2">My Environments</h1>
-            <p className="text-gray-400">Manage and monitor your Kubernetes environments</p>
+            <h1 className="text-3xl font-bold text-white mb-2">Mes environnements</h1>
+            <p className="text-gray-400">Gérez et surveillez vos environnements Kubernetes</p>
           </div>
         </div>
 
@@ -63,7 +63,7 @@ const Environments: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center space-x-2">
-                  {env.status === 'running' ? (
+                  {env.status === 'en cours' ? (
                     <button className="p-2 bg-red-500/20 text-red-400 rounded-lg hover:bg-red-500/30 transition-colors">
                       <Square className="h-4 w-4" />
                     </button>
@@ -85,7 +85,7 @@ const Environments: React.FC = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Technology Stack</h4>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Pile technologique</h4>
                   <div className="flex flex-wrap gap-2">
                     {env.stack.map(tech => (
                       <span key={tech} className="px-2 py-1 bg-gray-800 text-gray-300 rounded text-sm">
@@ -96,28 +96,28 @@ const Environments: React.FC = () => {
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Resources</h4>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Ressources</h4>
                   <div className="space-y-1 text-sm">
                     <div className="flex justify-between text-gray-300">
-                      <span>CPU:</span>
-                      <span>{env.resources.cpu} cores</span>
+                      <span>CPU :</span>
+                      <span>{env.resources.cpu} cœurs</span>
                     </div>
                     <div className="flex justify-between text-gray-300">
-                      <span>RAM:</span>
+                      <span>Mémoire :</span>
                       <span>{env.resources.ram} GB</span>
                     </div>
                     <div className="flex justify-between text-gray-300">
-                      <span>Storage:</span>
+                      <span>Stockage :</span>
                       <span>{env.resources.storage} GB</span>
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Access</h4>
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Accès</h4>
                   <div className="space-y-2">
                     <div className="text-sm text-gray-300">
-                      Uptime: {env.uptime}
+                      Temps de fonctionnement : {env.uptime}
                     </div>
                     {env.domain && (
                       <a 
@@ -139,9 +139,9 @@ const Environments: React.FC = () => {
 
         {environments.length === 0 && (
           <div className="text-center py-12">
-            <div className="text-gray-400 mb-4">No environments found</div>
+            <div className="text-gray-400 mb-4">Aucun environnement trouvé</div>
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-200">
-              Create Your First Environment
+              Créer votre premier environnement
             </button>
           </div>
         )}

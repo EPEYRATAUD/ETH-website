@@ -12,11 +12,11 @@ const EnvironmentCreator: React.FC = () => {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
 
   const steps = [
-    'Environment Name',
-    'Template Selection', 
-    'Technology Stack',
-    'Resource Configuration',
-    'Review & Deploy'
+    'Nom de l\'environnement',
+    'Sélection de modèle', 
+    'Pile technologique',
+    'Configuration des ressources',
+    'Révision et déploiement'
   ];
 
   const handleDeploy = () => {
@@ -34,8 +34,8 @@ const EnvironmentCreator: React.FC = () => {
         return (
           <div className="space-y-6">
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-white mb-2">Name Your Environment</h2>
-              <p className="text-gray-400">Choose a unique name for your Kubernetes environment</p>
+              <h2 className="text-2xl font-bold text-white mb-2">Nommez votre environnement</h2>
+              <p className="text-gray-400">Choisissez un nom unique pour votre environnement Kubernetes</p>
             </div>
             
             <div className="max-w-md mx-auto">
@@ -43,7 +43,7 @@ const EnvironmentCreator: React.FC = () => {
                 type="text"
                 value={state.name}
                 onChange={(e) => updateName(e.target.value)}
-                placeholder="my-awesome-project"
+                placeholder="mon-super-projet"
                 className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-colors"
               />
             </div>
@@ -54,16 +54,16 @@ const EnvironmentCreator: React.FC = () => {
         return (
           <div className="space-y-6">
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-white mb-2">Choose a Template</h2>
-              <p className="text-gray-400">Start with a pre-configured stack or build custom</p>
+              <h2 className="text-2xl font-bold text-white mb-2">Choisissez un modèle</h2>
+              <p className="text-gray-400">Commencez avec une pile préconfigurée ou créez sur mesure</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-gray-800 rounded-xl p-6 border-2 border-dashed border-gray-700 hover:border-cyan-400 transition-colors cursor-pointer">
                 <div className="text-center">
                   <Rocket className="h-12 w-12 text-cyan-400 mx-auto mb-3" />
-                  <h3 className="font-semibold text-white mb-2">Custom Stack</h3>
-                  <p className="text-sm text-gray-400">Build your environment from scratch</p>
+                  <h3 className="font-semibold text-white mb-2">Pile personnalisée</h3>
+                  <p className="text-sm text-gray-400">Construisez votre environnement à partir de zéro</p>
                 </div>
               </div>
 
@@ -93,17 +93,17 @@ const EnvironmentCreator: React.FC = () => {
         return (
           <div className="space-y-8">
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-white mb-2">Select Your Technology Stack</h2>
-              <p className="text-gray-400">Choose the technologies for your environment</p>
+              <h2 className="text-2xl font-bold text-white mb-2">Sélectionnez votre pile technologique</h2>
+              <p className="text-gray-400">Choisissez les technologies pour votre environnement</p>
             </div>
 
             {(['language', 'loadBalancer', 'webServer', 'database'] as const).map(category => {
               const techs = getTechnologiesByCategory(category);
               const categoryLabels = {
-                language: 'Development Language',
-                loadBalancer: 'Load Balancer',
-                webServer: 'Web Server',
-                database: 'Database'
+                language: 'Langage de développement',
+                loadBalancer: 'Répartiteur de charge',
+                webServer: 'Serveur web',
+                database: 'Base de données'
               };
 
               return (
@@ -129,8 +129,8 @@ const EnvironmentCreator: React.FC = () => {
         return (
           <div className="space-y-8">
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-white mb-2">Configure Resources</h2>
-              <p className="text-gray-400">Allocate computing resources for your environment</p>
+             <h2 className="text-2xl font-bold text-white mb-2">Configurez les ressources</h2>
+             <p className="text-gray-400">Allouez les ressources informatiques pour votre environnement</p>
             </div>
 
             <div className="max-w-2xl mx-auto space-y-8">
@@ -138,7 +138,7 @@ const EnvironmentCreator: React.FC = () => {
                 <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
                   <div className="flex items-center space-x-3 mb-4">
                     <Cpu className="h-6 w-6 text-cyan-400" />
-                    <span className="font-semibold text-white">CPU Cores</span>
+                    <span className="font-semibold text-white">Cœurs CPU</span>
                   </div>
                   <ResourceSlider
                     label=""
@@ -146,7 +146,7 @@ const EnvironmentCreator: React.FC = () => {
                     min={1}
                     max={8}
                     step={1}
-                    unit="cores"
+                    unit="cœurs"
                     color="cyan"
                     onChange={(value) => updateResources({ cpu: value })}
                   />
@@ -155,7 +155,7 @@ const EnvironmentCreator: React.FC = () => {
                 <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
                   <div className="flex items-center space-x-3 mb-4">
                     <MemoryStick className="h-6 w-6 text-purple-400" />
-                    <span className="font-semibold text-white">Memory</span>
+                    <span className="font-semibold text-white">Mémoire</span>
                   </div>
                   <ResourceSlider
                     label=""
@@ -172,7 +172,7 @@ const EnvironmentCreator: React.FC = () => {
                 <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
                   <div className="flex items-center space-x-3 mb-4">
                     <HardDrive className="h-6 w-6 text-green-400" />
-                    <span className="font-semibold text-white">Storage</span>
+                    <span className="font-semibold text-white">Stockage</span>
                   </div>
                   <ResourceSlider
                     label=""
@@ -194,23 +194,23 @@ const EnvironmentCreator: React.FC = () => {
         return (
           <div className="space-y-8">
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-white mb-2">Review & Deploy</h2>
-              <p className="text-gray-400">Confirm your environment configuration</p>
+              <h2 className="text-2xl font-bold text-white mb-2">Révision et déploiement</h2>
+              <p className="text-gray-400">Confirmez la configuration de votre environnement</p>
             </div>
 
             <div className="max-w-2xl mx-auto space-y-6">
               <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-                <h3 className="font-semibold text-white mb-4">Environment Details</h3>
+                <h3 className="font-semibold text-white mb-4">Détails de l'environnement</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
-                    <span className="text-gray-400">Name:</span>
+                    <span className="text-gray-400">Nom :</span>
                     <span className="text-white font-medium">{state.name}</span>
                   </div>
                 </div>
               </div>
 
               <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-                <h3 className="font-semibold text-white mb-4">Technology Stack</h3>
+                <h3 className="font-semibold text-white mb-4">Pile technologique</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {state.selectedTechnologies.map(tech => (
                     <div key={tech.id} className="flex items-center space-x-2">
@@ -222,19 +222,19 @@ const EnvironmentCreator: React.FC = () => {
               </div>
 
               <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-                <h3 className="font-semibold text-white mb-4">Resource Allocation</h3>
+                <h3 className="font-semibold text-white mb-4">Allocation des ressources</h3>
                 <div className="grid grid-cols-3 gap-4">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-cyan-400">{state.resources.cpu}</div>
-                    <div className="text-sm text-gray-400">CPU Cores</div>
+                    <div className="text-sm text-gray-400">Cœurs CPU</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-purple-400">{state.resources.ram} GB</div>
-                    <div className="text-sm text-gray-400">RAM</div>
+                    <div className="text-sm text-gray-400">Mémoire</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-green-400">{state.resources.storage} GB</div>
-                    <div className="text-sm text-gray-400">Storage</div>
+                    <div className="text-sm text-gray-400">Stockage</div>
                   </div>
                 </div>
               </div>
@@ -253,9 +253,9 @@ const EnvironmentCreator: React.FC = () => {
         {/* Progress Header */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-6">
-            <h1 className="text-3xl font-bold text-white">Create Environment</h1>
+            <h1 className="text-3xl font-bold text-white">Créer un environnement</h1>
             <div className="text-sm text-gray-400">
-              Step {state.step} of {steps.length}
+              Étape {state.step} sur {steps.length}
             </div>
           </div>
 
@@ -295,7 +295,7 @@ const EnvironmentCreator: React.FC = () => {
             className="flex items-center space-x-2 px-4 py-2 text-gray-400 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             <ChevronLeft className="h-4 w-4" />
-            <span>Previous</span>
+            <span>Précédent</span>
           </button>
 
           {state.step < steps.length ? (
@@ -304,7 +304,7 @@ const EnvironmentCreator: React.FC = () => {
               disabled={state.step === 1 && !state.name.trim()}
               className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
             >
-              <span>Next</span>
+              <span>Suivant</span>
               <ChevronRight className="h-4 w-4" />
             </button>
           ) : (
@@ -313,7 +313,7 @@ const EnvironmentCreator: React.FC = () => {
               className="flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-semibold rounded-lg transition-all duration-200 transform hover:scale-105"
             >
               <Rocket className="h-4 w-4" />
-              <span>Deploy Environment</span>
+              <span>Déployer l'environnement</span>
             </button>
           )}
         </div>

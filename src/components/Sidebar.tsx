@@ -19,16 +19,16 @@ interface SidebarProps {
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, activeSection, onSectionChange }) => {
   const menuItems = [
-    { id: 'dashboard', icon: Home, label: 'Dashboard' },
-    { id: 'create', icon: Plus, label: 'Create Environment' },
-    { id: 'environments', icon: Layers, label: 'My Environments' },
-    { id: 'monitoring', icon: Activity, label: 'Monitoring' },
+    { id: 'dashboard', icon: Home, label: 'Tableau de bord' },
+    { id: 'create', icon: Plus, label: 'Créer un environnement' },
+    { id: 'environments', icon: Layers, label: 'Mes environnements' },
+    { id: 'monitoring', icon: Activity, label: 'Surveillance' },
   ];
 
   const secondaryItems = [
-    { id: 'settings', icon: Settings, label: 'Settings' },
+    { id: 'settings', icon: Settings, label: 'Paramètres' },
     { id: 'docs', icon: BookOpen, label: 'Documentation' },
-    { id: 'support', icon: HelpCircle, label: 'Support' },
+    { id: 'support', icon: HelpCircle, label: 'Assistance' },
   ];
 
   return (
@@ -50,7 +50,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, activeSection, onSec
         <div className="flex flex-col h-full">
           <div className="flex-1 px-4 py-6 space-y-2">
             <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              Main Navigation
+              Navigation principale
             </div>
             
             {menuItems.map(item => (
@@ -79,7 +79,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, activeSection, onSec
 
           <div className="px-4 py-4 border-t border-gray-700">
             <div className="text-xs font-semibold text-gray-400 uppercase tracking-wider mb-4">
-              Resources
+              Ressources
             </div>
             
             {secondaryItems.map(item => (
@@ -99,12 +99,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, activeSection, onSec
           
           <div className="px-4 py-4 border-t border-gray-700">
             <div className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-3">
-              <div className="text-xs text-gray-400 mb-1">Resource Usage</div>
+              <div className="text-xs text-gray-400 mb-1">Utilisation des ressources</div>
               <div className="space-y-2">
                 <div>
                   <div className="flex justify-between text-xs text-gray-300 mb-1">
-                    <span>CPU</span>
-                    <span>2/4 cores</span>
+                    <span>Processeur</span>
+                    <span>2/4 cœurs</span>
                   </div>
                   <div className="w-full bg-gray-600 rounded-full h-1.5">
                     <div className="bg-gradient-to-r from-cyan-400 to-blue-500 h-1.5 rounded-full" style={{width: '50%'}}></div>
@@ -112,7 +112,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose, activeSection, onSec
                 </div>
                 <div>
                   <div className="flex justify-between text-xs text-gray-300 mb-1">
-                    <span>RAM</span>
+                    <span>Mémoire</span>
                     <span>4/8 GB</span>
                   </div>
                   <div className="w-full bg-gray-600 rounded-full h-1.5">

@@ -22,20 +22,20 @@ const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
               <div className="absolute inset-0 bg-cyan-400 blur-sm opacity-30 rounded-full"></div>
             </div>
             <h1 className="text-2xl font-bold text-white">ETH</h1>
-            <span className="text-sm text-gray-400 hidden sm:block">Kubernetes Cloud Platform</span>
+            <span className="text-sm text-gray-400 hidden sm:block">Plateforme Cloud Kubernetes</span>
           </div>
         </div>
         
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Dashboard</a>
-          <a href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Environments</a>
+          <a href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Tableau de bord</a>
+          <a href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Environnements</a>
           <a href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Marketplace</a>
           <a href="#" className="text-gray-300 hover:text-cyan-400 transition-colors">Documentation</a>
         </nav>
 
         <div className="flex items-center space-x-3">
           <div className="text-right hidden sm:block">
-            <div className="text-sm text-white">Student User</div>
+            <div className="text-sm text-white">Utilisateur Étudiant</div>
             <div className="text-xs text-gray-400">student@eth.edu</div>
           </div>
           <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center">

@@ -3,18 +3,18 @@ import { Activity, Cpu, HardDrive, Wifi } from 'lucide-react';
 
 const Monitoring: React.FC = () => {
   const metrics = [
-    { label: 'CPU Usage', value: '42%', icon: Cpu, color: 'text-cyan-400' },
-    { label: 'Memory Usage', value: '68%', icon: Activity, color: 'text-purple-400' },
-    { label: 'Disk Usage', value: '35%', icon: HardDrive, color: 'text-green-400' },
-    { label: 'Network I/O', value: '1.2MB/s', icon: Wifi, color: 'text-orange-400' },
+    { label: 'Utilisation CPU', value: '42%', icon: Cpu, color: 'text-cyan-400' },
+    { label: 'Utilisation mémoire', value: '68%', icon: Activity, color: 'text-purple-400' },
+    { label: 'Utilisation disque', value: '35%', icon: HardDrive, color: 'text-green-400' },
+    { label: 'E/S réseau', value: '1.2MB/s', icon: Wifi, color: 'text-orange-400' },
   ];
 
   return (
     <div className="min-h-screen bg-gray-950 p-6">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-white mb-2">Resource Monitoring</h1>
-          <p className="text-gray-400">Monitor resource usage across your environments</p>
+          <h1 className="text-3xl font-bold text-white mb-2">Surveillance des ressources</h1>
+          <p className="text-gray-400">Surveillez l'utilisation des ressources dans vos environnements</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -31,16 +31,16 @@ const Monitoring: React.FC = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="bg-gray-900 rounded-xl border border-gray-700 p-6">
-            <h2 className="text-xl font-semibold text-white mb-6">CPU Usage Over Time</h2>
+            <h2 className="text-xl font-semibold text-white mb-6">Utilisation CPU dans le temps</h2>
             <div className="h-64 bg-gray-800 rounded-lg flex items-center justify-center">
-              <p className="text-gray-400">CPU usage chart would be rendered here</p>
+              <p className="text-gray-400">Le graphique d'utilisation CPU serait affiché ici</p>
             </div>
           </div>
 
           <div className="bg-gray-900 rounded-xl border border-gray-700 p-6">
-            <h2 className="text-xl font-semibold text-white mb-6">Memory Usage</h2>
+            <h2 className="text-xl font-semibold text-white mb-6">Utilisation mémoire</h2>
             <div className="h-64 bg-gray-800 rounded-lg flex items-center justify-center">
-              <p className="text-gray-400">Memory usage chart would be rendered here</p>
+              <p className="text-gray-400">Le graphique d'utilisation mémoire serait affiché ici</p>
             </div>
           </div>
         </div>

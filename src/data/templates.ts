@@ -5,7 +5,7 @@ export const environmentTemplates: EnvironmentTemplate[] = [
   {
     id: 'mern-stack',
     name: 'MERN Stack',
-    description: 'MongoDB, Express.js, React, Node.js full-stack application',
+    description: 'Application full-stack MongoDB, Express.js, React, Node.js',
     category: 'fullstack',
     stack: [
       technologies.find(t => t.id === 'nodejs')!,
@@ -17,7 +17,7 @@ export const environmentTemplates: EnvironmentTemplate[] = [
   {
     id: 'django-postgres',
     name: 'Django + PostgreSQL',
-    description: 'Python web framework with PostgreSQL database',
+    description: 'Framework web Python avec base de données PostgreSQL',
     category: 'web',
     stack: [
       technologies.find(t => t.id === 'python')!,
@@ -29,7 +29,7 @@ export const environmentTemplates: EnvironmentTemplate[] = [
   {
     id: 'laravel-mysql',
     name: 'Laravel + MySQL',
-    description: 'PHP framework with MySQL database',
+    description: 'Framework PHP avec base de données MySQL',
     category: 'web',
     stack: [
       technologies.find(t => t.id === 'php')!,
@@ -40,8 +40,8 @@ export const environmentTemplates: EnvironmentTemplate[] = [
   },
   {
     id: 'microservices',
-    name: 'Microservices Architecture',
-    description: 'Load-balanced microservices with Redis cache',
+    name: 'Architecture Microservices',
+    description: 'Microservices avec répartition de charge et cache Redis',
     category: 'api',
     stack: [
       technologies.find(t => t.id === 'go')!,
