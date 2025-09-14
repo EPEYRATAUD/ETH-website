@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
               <div className="absolute inset-0 bg-cyan-400 blur-sm opacity-30 rounded-full"></div>
             </div>
             <h1 className="text-2xl font-bold text-white">ETH</h1>
-            <span className="text-sm text-gray-400 hidden sm:block">Plateforme Cloud Kubernetes</span>
+            <span className="text-sm text-gray-400 hidden sm:block">Eco Tech Hosting</span>
           </div>
         </div>
         
